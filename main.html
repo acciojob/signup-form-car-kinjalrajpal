@@ -8,19 +8,27 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<form method="post">
+	<form action="/submit" method="post">
 		
-        <label for="text">Name</label>
-		<input type="text" required  placeholder="Name"><br><br>
+        <label for="name">Name</label>
+		<input type="text" required id="name" placeholder="Name"><br><br>
 
 		<label for="email">Email</label>
-		<input type="email" required placeholder="Email"><br><br>
+		<input type="email" required id="email" placeholder="Email"><br><br>
 
-		<label for="gender">Gender</label>
-		<input type="radio" required ><br><br>
+		<label for="gender_m">M</label>
+		<input type="radio" name="gender" required id="gender_m">
+		<label for="gender_f">F</label>
+		<input type="radio" name="gender" required id="gender_f"><br><br>
 
-		<label for="carBrands"> Car Brands</label>
-		<input type="select" required id="cars" placeholder="--Please choose an option--"><br><br>
+		<label for="cars"> Car Brands</label>
+		<select required id="cars">
+		<option>--Please choose an option</option>
+		<option>BMW</option>
+		<option>Shwift</option>
+		<option>Maruti</option>
+		</select><br><br>
+		
 
 		<label for="age">Age</label>
 		<input type="number" required id="age" placeholder="Age"><br><br>
@@ -28,14 +36,16 @@
 		<label for="dob">DOB</label>
 		<input type="date" required id="dob"><br><br>
 
-		<label for="phoneNo">Phone Number</label>
+		<label for="tel">Phone Number</label>
 		<input type="tel" id="tel" placeholder="xxx-xxx-xxxx"><br><br>
 
 		<label for="pssword">Password</label>
 		<input type="password" id="password" required placeholder="Password"><br><br>
 
-		<label for="checkbox">I agree to the TOS</label>
-		<input type="checkbox" required id="tos">
+		<label for="tos">I agree to the TOS</label>
+		<input type="checkbox" required id="tos"><br><br>
+
+		<button type="submit">Submit</button>
 		
 	</form>
     <script type="text/javascript" src="./script.js">
